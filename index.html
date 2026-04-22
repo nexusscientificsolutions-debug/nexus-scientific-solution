@@ -1,6 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<title>xusscientificsolutions.com</title>
+   <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .form-container {
+            max-width: 800px;
+            margin: 40px auto;   /* centers the form */
+            padding: 20px 30px;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+        }
+
+        .form-container input,
+        .form-container textarea {
+            width: 100%;
+            margin: 10px 0 20px 0;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .form-container button {
+            margin-top: 10px;
+            padding: 10px 20px;
+            background: #6a0dad;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>NEXUS Scientific Solutions | Research & Academic Writing</title>
@@ -178,42 +214,23 @@ footer{
     <p></p>
   </div>
 </section>
+<div class="form-container">
+    <h2>Submit Your Order</h2>
 
-<section id="order">
-  <h2>Submit Your Order</h2>
-  <form action="https://formspree.io/f/xwvwyyyr" method="POST">
-    
     <label>Name:</label>
-    <input type="text" name="name" required>
+    <input type="text">
 
     <label>Email:</label>
-    <input type="email" name="email" required>
+    <input type="email">
 
     <label>Phone Number:</label>
-    <input type="tel" name="phone" required>
+    <input type="text">
 
     <label>Project Details:</label>
-    <textarea name="details" rows="5" required></textarea>
+    <textarea></textarea>
 
-    <button type="submit">Submit Order</button>
-  </form>
-</section>
- <style>
- border-radius: 8px;
-}
-
-.form-container input,
-.form-container textarea {
-    width: 100%;
-    margin: 10px 0 20px 0;
-    padding: 10px;
-}
-
-.form-container button {
-    margin-top: 10px;
-    padding: 10px 20px;
-}
-</style>
+    <button>Submit Order</button>
+</div>
 <section id="contact" class="section">
   <h2>Contact Us</h2>
   <p>Email: nexusscientificsolutions@gmail.com</p>
