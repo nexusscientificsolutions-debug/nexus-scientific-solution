@@ -80,10 +80,19 @@
     .hero{
       text-align:center;
       padding:120px 20px;
-      background:linear-gradient(135deg,#2563EB,#38BDF8);
+
+      /* SOFTER PROFESSIONAL GRADIENT */
+      background:
+      linear-gradient(
+        135deg,
+        #1d4ed8 0%,
+        #2563eb 45%,
+        #3b82f6 100%
+      );
+
       color:white;
 
-      min-height:320px;
+      min-height:250px;
 
       display:flex;
       flex-direction:column;
@@ -91,18 +100,47 @@
       align-items:center;
 
       animation:fadeIn 1.2s ease;
+
+      position:relative;
+      overflow:hidden;
     }
 
+    /* SOFT OVERLAY EFFECT */
+    .hero::before{
+      content:"";
+      position:absolute;
+      inset:0;
+
+      background:
+      radial-gradient(circle at top left,
+      rgba(255,255,255,0.12),
+      transparent 40%),
+
+      radial-gradient(circle at bottom right,
+      rgba(255,255,255,0.08),
+      transparent 35%);
+
+      pointer-events:none;
+    }
+
+    /* HERO CONTENT */
     .hero h1{
+      position:relative;
+      z-index:2;
+
       font-size:50px;
       margin-bottom:20px;
       font-weight:700;
+      letter-spacing:0.5px;
     }
 
     .hero p{
+      position:relative;
+      z-index:2;
+
       font-size:20px;
       max-width:800px;
-      color:#F1F5F9;
+      color:#E2E8F0;
       line-height:1.8;
     }
 
@@ -139,8 +177,8 @@
 
     .card:hover{
       transform:translateY(-8px);
-      border-color:#38BDF8;
-      box-shadow:0 10px 24px rgba(0,0,0,0.12);
+      border-color:#60A5FA;
+      box-shadow:0 10px 24px rgba(37,99,235,0.12);
     }
 
     .card h3{
@@ -201,8 +239,8 @@
     .form-container input:focus,
     .form-container textarea:focus{
       outline:none;
-      border-color:#38BDF8;
-      box-shadow:0 0 0 3px rgba(56,189,248,0.15);
+      border-color:#60A5FA;
+      box-shadow:0 0 0 3px rgba(96,165,250,0.18);
     }
 
     /* BUTTON */
@@ -219,7 +257,7 @@
     }
 
     button:hover{
-      background:#1D4ED8;
+      background:#1d4ed8;
     }
 
     /* CONTACT */
