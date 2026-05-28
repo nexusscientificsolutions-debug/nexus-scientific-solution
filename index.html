@@ -1,284 +1,330 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<title>xusscientificsolutions.com</title>
-   <style>
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: Arial, sans-serif;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        .form-container {
-            max-width: 800px;
-            margin: 40px auto;   /* centers the form */
-            padding: 20px 30px;
-            background-color: #f9f9f9;
-            border-radius: 8px;
-        }
+  <title>NEXUS Scientific Solutions | Research & Academic Writing</title>
 
-        .form-container input,
-        .form-container textarea {
-            width: 100%;
-            margin: 10px 0 20px 0;
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-        }
+  <!-- SEO META -->
+  <meta name="description"
+    content="NEXUS Scientific Solutions offers professional research, review papers, thesis and dissertation writing services.">
 
-        .form-container button {
-            margin-top: 10px;
-            padding: 10px 20px;
-            background: #6a0dad;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-    </style>
-</head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>NEXUS Scientific Solutions | Research & Academic Writing</title>
+  <meta name="keywords"
+    content="research writing, thesis writing, dissertation help, scientific writing, white paper writing">
 
-<!-- SEO META -->
-<meta name="description" content="NEXUS Scientific Solutions offers professional research, review papers, thesis and dissertation writing services.">
-<meta name="keywords" content="research writing, thesis writing, dissertation help, scientific writing, white paper writing">
-<meta name="author" content="NEXUS Scientific Solutions">
+  <meta name="author" content="NEXUS Scientific Solutions">
 
-<!-- Google Font -->
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+    rel="stylesheet">
 
-<style>
-body{
-  margin:0;
-  font-family:'Poppins',sans-serif;
-  background:#f5f7fb;
-  color:#333;
-}
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: #f5f7fb;
+      color: #333;
+    }
 
-header{
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  padding:15px 40px;
-  background:white;
-  box-shadow:0 2px 10px rgba(0,0,0,0.08);
-  position:sticky;
-  top:0;
-  z-index:1000;
-}
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 15px 40px;
+      background: white;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
 
-.logo{
-  display:flex;
-  align-items:center;
-  gap:12px;
-}
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
 
-.logo img{
-  height:60px;
-}
+    .logo img {
+      height: 60px;
+    }
 
-nav a{
-  margin:0 15px;
-  text-decoration:none;
-  color:#333;
-  font-weight:600;
-}
+    nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: #333;
+      font-weight: 600;
+    }
 
-.hero{
-  text-align:center;
-  padding:80px 20px;
-  background:linear-gradient(135deg,#0ea5e9,#6d28d9);
-  color:white;
-  animation:fadeIn 1.5s ease;
-}
+    .hero {
+      text-align: center;
+      padding: 80px 20px;
+      background: linear-gradient(135deg, #0ea5e9, #6d28d9);
+      color: white;
+      animation: fadeIn 1.5s ease;
+    }
 
-.hero h1{font-size:42px;margin-bottom:10px;}
-.hero p{font-size:18px;}
+    .hero h1 {
+      font-size: 42px;
+      margin-bottom: 10px;
+    }
 
-.section{
-  padding:60px 20px;
-  max-width:1100px;
-  margin:auto;
-}
+    .hero p {
+      font-size: 18px;
+    }
 
-.cards{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-  gap:20px;
-}
+    .section {
+      padding: 60px 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
 
-.card{
-  background:white;
-  padding:25px;
-  border-radius:12px;
-  box-shadow:0 6px 18px rgba(0,0,0,0.08);
-  transition:0.4s;
-}
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
 
-.card:hover{
-  transform:translateY(-8px);
-}
-<!--
-.pricing{
-  background:#eef2ff;
-  text-align:center;
-  padding:50px;
-  border-radius:12px;
-} -->
+    .card {
+      background: white;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+      transition: 0.4s;
+      text-align: center;
+      font-size: 18px;
+      font-weight: 600;
+    }
 
-form input, form textarea{
-  width:100%;
-  padding:12px;
-  margin:10px 0;
-  border-radius:8px;
-  border:1px solid #ccc;
-}
+    .card:hover {
+      transform: translateY(-8px);
+    }
 
-button{
-  background:#6d28d9;
-  color:white;
-  border:none;
-  padding:12px 25px;
-  border-radius:8px;
-  cursor:pointer;
-  font-weight:600;
-}
+    .card-link {
+      text-decoration: none;
+      color: inherit;
+    }
 
-button:hover{background:#4c1d95;}
+    .card-link .card {
+      cursor: pointer;
+    }
 
-footer{
-  background:#111827;
-  color:white;
-  text-align:center;
-  padding:25px;
-}
-   /* ✅ NEW: make cards clickable and clean */
-.card-link{
-  text-decoration:none;
-  color:inherit;
-}
+    .form-container {
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 20px 30px;
+      background-color: white;
+      border-radius: 12px;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+    }
 
-.card-link .card{
-  cursor:pointer;
-}
+    .form-container h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
 
-/* WhatsApp Button */
-.whatsapp{
-  position:fixed;
-  bottom:20px;
-  right:20px;
-  background:#25D366;
-  color:white;
-  padding:15px 18px;
-  border-radius:50%;
-  font-size:22px;
-  text-decoration:none;
-  box-shadow:0 4px 12px rgba(0,0,0,0.3);
-}
+    .form-container input,
+    .form-container textarea {
+      width: 100%;
+      margin: 10px 0 20px 0;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-family: inherit;
+      font-size: 15px;
+      box-sizing: border-box;
+    }
 
-@keyframes fadeIn{
-  from{opacity:0;transform:translateY(30px);} 
-  to{opacity:1;transform:translateY(0);} 
-}
-</style>
+    button {
+      background: #6d28d9;
+      color: white;
+      border: none;
+      padding: 12px 25px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: 600;
+      font-size: 15px;
+    }
+
+    button:hover {
+      background: #4c1d95;
+    }
+
+    footer {
+      background: #111827;
+      color: white;
+      text-align: center;
+      padding: 25px;
+      margin-top: 40px;
+    }
+
+    .whatsapp {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #25D366;
+      color: white;
+      padding: 15px 18px;
+      border-radius: 50%;
+      font-size: 22px;
+      text-decoration: none;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media(max-width:768px) {
+      header {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      nav {
+        margin-top: 10px;
+      }
+
+      nav a {
+        display: inline-block;
+        margin: 8px;
+      }
+
+      .hero h1 {
+        font-size: 30px;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-<header>
-  <div class="logo">
-    <img src="logo.jpeg" alt="Nexus Logo">
-    <h2>NEXUS Scientific Solutions</h2>
-  </div>
-  <nav>
-    <a href="#services">Services</a>
-    <!--<a href="#pricing">Pricing</a>-->
-    <a href="#order">Order</a>
-    <!--<a href="#login">Client Login</a>-->
-    <a href="#contact">Contact</a>
-  </nav>
-</header>
+  <!-- HEADER -->
+  <header>
+    <div class="logo">
+      <img src="logo.jpeg" alt="Nexus Logo">
+      <h2>NEXUS Scientific Solutions</h2>
+    </div>
 
-<section class="hero">
-  <h1>Professional Research & Academic Writing</h1>
-  <p>Research Papers • Reviews • White Papers • Thesis • Dissertation Writing</p>
-</section>
+    <nav>
+      <a href="#services">Services</a>
+      <a href="#order">Order</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
 
-<section id="services" class="section">
-  <h2>Our Services</h2>
-  <div class="cards">
-    <!-- ✅ CHANGED: wrapped cards with <a> tags -->
-<a href="research.html" class="card-link">
-  <div class="card">Research Paper Writing</div>
-</a>
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <h1>Professional Research & Academic Writing</h1>
 
-<a href="review.html" class="card-link">
-  <div class="card">Review Articles</div>
-</a>
+    <p>
+      Research Papers • Reviews • White Papers • Thesis • Dissertation Writing
+    </p>
+  </section>
 
-<a href="whitepaper.html" class="card-link">
-  <div class="card">White Papers</div>
-</a>
+  <!-- SERVICES -->
+  <section id="services" class="section">
 
-<a href="thesis.html" class="card-link">
-  <div class="card">Thesis & Dissertation</div>
-</a>
-  </div>
-</section>
+    <h2>Our Services</h2>
 
-<!--<section id="pricing" class="section">
-  <div class="pricing">
-    <h2>Pricing</h2>
-    <h3></h3>
-    <p></p>
-  </div>
-</section> -->
-<div class="form-container">
-    <h2>Submit Your Order</h2>
+    <div class="cards">
 
-    <label>Name:</label>
-    <input type="text">
+      <a href="research.html" class="card-link">
+        <div class="card">Research Paper Writing</div>
+      </a>
 
-    <label>Email:</label>
-    <input type="email">
+      <a href="review.html" class="card-link">
+        <div class="card">Review Articles</div>
+      </a>
 
-    <label>Phone Number:</label>
-    <input type="text">
+      <a href="whitepaper.html" class="card-link">
+        <div class="card">White Papers</div>
+      </a>
 
-    <label>Project Details:</label>
-    <textarea></textarea>
+      <a href="thesis.html" class="card-link">
+        <div class="card">Thesis & Dissertation</div>
+      </a>
 
-    <button>Submit Order</button>
-</div>
-<section id="contact" class="section">
-  <h2>Contact Us</h2>
-  <p>Email: nexusscientificsolutions@gmail.com</p>
-  <p>Phone: 9587078847</p>
-</section>
-    
-<footer>
-  <p>© 2026 NEXUS Scientific Solutions</p>
-</footer>
+    </div>
+  </section>
 
-<!-- WhatsApp Chat -->
-<a class="whatsapp" href="https://wa.me/919587078847" target="_blank">💬</a>
+  <!-- ORDER FORM -->
+  <section id="order">
 
-<script>
-// Fake Login Demo
-function login(e){
-  e.preventDefault();
-  document.getElementById("loginMsg").innerText="Login Successful (Demo Dashboard)";
-}
+    <form class="form-container" id="orderForm">
 
-// Auto Email Simulation
-const form=document.getElementById("orderForm");
-form.addEventListener("submit",function(e){
-  e.preventDefault();
-  alert("Order Submitted! Email notification sent to admin.");
-});
-</script>
+      <h2>Submit Your Order</h2>
+
+      <label>Name:</label>
+      <input type="text" placeholder="Enter your name" required>
+
+      <label>Email:</label>
+      <input type="email" placeholder="Enter your email" required>
+
+      <label>Phone Number:</label>
+      <input type="text" placeholder="Enter phone number" required>
+
+      <label>Project Details:</label>
+      <textarea rows="6"
+        placeholder="Describe your project requirements"></textarea>
+
+      <button type="submit">Submit Order</button>
+
+    </form>
+
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="section">
+
+    <h2>Contact Us</h2>
+
+    <p>Email: nexusscientificsolutions@gmail.com</p>
+
+    <p>Phone: 9587078847</p>
+
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2026 NEXUS Scientific Solutions</p>
+  </footer>
+
+  <!-- WHATSAPP BUTTON -->
+  <a class="whatsapp"
+    href="https://wa.me/919587078847"
+    target="_blank">
+    💬
+  </a>
+
+  <!-- JAVASCRIPT -->
+  <script>
+
+    const form = document.getElementById("orderForm");
+
+    form.addEventListener("submit", function (e) {
+
+      e.preventDefault();
+
+      alert("Order Submitted Successfully!");
+
+      form.reset();
+
+    });
+
+  </script>
 
 </body>
+
 </html>
+
