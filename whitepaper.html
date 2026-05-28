@@ -7,77 +7,264 @@
 
   <title>White Paper Writing | NEXUS Scientific Solutions</title>
 
-  <!-- Google Font -->
+  <!-- GOOGLE FONT -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
     rel="stylesheet">
 
   <style>
 
+    /* BODY */
     body{
       margin:0;
-      padding:0;
       font-family:'Poppins',sans-serif;
-      background:#f5f7fb;
-      color:#333;
+      background:#FFFFFF;
+      color:#1E293B;
+      overflow-x:hidden;
     }
 
     /* HEADER */
     header{
-      background:#6d28d9;
-      color:white;
-      padding:20px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      padding:20px 40px;
+      background:#FFFFFF;
+      box-shadow:0 2px 12px rgba(0,0,0,0.08);
+      min-height:110px;
+      box-sizing:border-box;
+    }
+
+    /* LOGO */
+    .logo{
+      display:flex;
+      align-items:center;
+      gap:15px;
+    }
+
+    .logo img{
+      height:95px;
+      width:auto;
+      display:block;
+    }
+
+    .logo h2{
+      margin:0;
+      color:#1E293B;
+      font-size:28px;
+      font-weight:700;
+    }
+
+    /* HERO SECTION */
+    .hero{
       text-align:center;
+      padding:120px 20px;
+
+      background:
+      linear-gradient(
+        135deg,
+        #1d4ed8 0%,
+        #2563eb 45%,
+        #3b82f6 100%
+      );
+
+      color:white;
+
+      min-height:320px;
+
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+      align-items:center;
+
+      animation:fadeIn 1.2s ease;
+
+      position:relative;
+      overflow:hidden;
     }
 
-    /* CONTAINER */
-    .container{
-      max-width:1000px;
-      margin:auto;
-      padding:50px 20px;
+    /* SOFT OVERLAY EFFECT */
+    .hero::before{
+      content:"";
+      position:absolute;
+      inset:0;
+
+      background:
+      radial-gradient(circle at top left,
+      rgba(255,255,255,0.12),
+      transparent 40%),
+
+      radial-gradient(circle at bottom right,
+      rgba(255,255,255,0.08),
+      transparent 35%);
+
+      pointer-events:none;
     }
 
-    /* CONTENT BOX */
-    .content-box{
-      background:white;
-      padding:40px;
-      border-radius:12px;
-      box-shadow:0 6px 18px rgba(0,0,0,0.08);
+    /* HERO CONTENT */
+    .hero h1{
+      position:relative;
+      z-index:2;
+
+      font-size:50px;
+      margin-bottom:20px;
+      font-weight:700;
+      letter-spacing:0.5px;
+    }
+
+    .hero p{
+      position:relative;
+      z-index:2;
+
+      font-size:20px;
+      max-width:850px;
+      color:#E2E8F0;
       line-height:1.8;
     }
 
-    h1{
-      color:#6d28d9;
-      margin-bottom:25px;
+    /* MAIN SECTION */
+    .section{
+      max-width:1100px;
+      margin:auto;
+      padding:70px 20px;
     }
 
-    ul li{
-      margin-bottom:12px;
+    /* CONTENT CARD */
+    .card{
+      background:#FFFFFF;
+      padding:45px;
+      border-radius:18px;
+      box-shadow:0 6px 18px rgba(0,0,0,0.08);
+      border:1px solid #E2E8F0;
+      transition:0.4s;
+    }
+
+    /* CARD HOVER */
+    .card:hover{
+      transform:translateY(-8px);
+      border-color:#60A5FA;
+      box-shadow:0 10px 24px rgba(37,99,235,0.12);
+    }
+
+    /* SUB HEADING */
+    .card h2{
+      color:#2563EB;
+      margin-bottom:25px;
+      font-size:32px;
+      text-align:center;
+    }
+
+    /* CONTENT POINTS */
+    .point{
+      display:flex;
+      align-items:flex-start;
+      gap:14px;
+      margin-bottom:24px;
+    }
+
+    .bullet{
+      color:#2563EB;
+      font-size:22px;
+      font-weight:bold;
+      line-height:1.6;
+    }
+
+    .point p{
+      margin:0;
+      color:#475569;
+      font-size:16px;
+      line-height:1.9;
+    }
+
+    /* FEATURES */
+    .features{
+      margin-top:35px;
+      padding-left:20px;
+    }
+
+    .features li{
+      margin-bottom:14px;
+      color:#334155;
+      font-weight:500;
+      line-height:1.7;
     }
 
     /* BUTTON */
-    .back-btn{
+    .btn{
       display:inline-block;
-      margin-top:30px;
-      background:#6d28d9;
+      margin-top:35px;
+      background:#2563EB;
       color:white;
-      padding:12px 25px;
-      border-radius:8px;
+      border:none;
+      padding:14px 30px;
+      border-radius:10px;
       text-decoration:none;
+      cursor:pointer;
       font-weight:600;
+      font-size:16px;
+      transition:0.3s;
     }
 
-    .back-btn:hover{
-      background:#4c1d95;
+    .btn:hover{
+      background:#1d4ed8;
     }
 
-    @media(max-width:768px){
+    /* FOOTER */
+    footer{
+      background:#1E293B;
+      color:white;
+      text-align:center;
+      padding:25px;
+      margin-top:50px;
+    }
 
-      .content-box{
-        padding:25px;
+    /* ANIMATION */
+    @keyframes fadeIn{
+      from{
+        opacity:0;
+        transform:translateY(30px);
       }
 
-      h1{
-        font-size:28px;
+      to{
+        opacity:1;
+        transform:translateY(0);
+      }
+    }
+
+    /* MOBILE RESPONSIVE */
+    @media(max-width:768px){
+
+      header{
+        flex-direction:column;
+        text-align:center;
+        padding:20px;
+      }
+
+      .logo{
+        flex-direction:column;
+      }
+
+      .logo img{
+        height:80px;
+      }
+
+      .hero{
+        padding:90px 20px;
+      }
+
+      .hero h1{
+        font-size:34px;
+      }
+
+      .hero p{
+        font-size:16px;
+      }
+
+      .card{
+        padding:28px;
+      }
+
+      .card h2{
+        font-size:26px;
       }
 
     }
@@ -88,75 +275,129 @@
 
 <body>
 
-<!-- HEADER -->
-<header>
-  <h2>NEXUS Scientific Solutions</h2>
-</header>
+  <!-- HEADER -->
+  <header>
 
-<!-- MAIN CONTENT -->
-<div class="container">
+    <div class="logo">
+      <img src="logo.jpeg" alt="NEXUS Logo">
+      <h2>NEXUS Scientific Solutions</h2>
+    </div>
 
-  <div class="content-box">
+  </header>
 
-    <h1>White Paper Writing Services</h1>
+  <!-- HERO SECTION -->
+  <section class="hero">
 
-    <p>
-      At Nexus Scientific Solutions, we provide professional white paper
-      writing services designed to help businesses, researchers, startups,
-      and organizations communicate complex ideas with clarity, authority,
-      and impact.
-    </p>
+    <h1>White Paper Writing</h1>
 
     <p>
-      Our white papers are carefully developed to present technical,
-      scientific, or business information in a structured and persuasive
-      manner. Whether you need a white paper for research communication,
-      product promotion, policy discussion, or industry insights, our
-      experts ensure high-quality and professionally written content.
+      Professional white paper writing services for scientific, technical,
+      academic, and business communication needs.
     </p>
 
-    <p>
-      We assist in identifying key objectives, gathering relevant data,
-      conducting in-depth research, and creating well-organized documents
-      that effectively address your target audience.
-    </p>
+  </section>
 
-    <p>
-      Each white paper is written with a strong focus on accuracy,
-      readability, and strategic presentation. Our team ensures proper
-      formatting, logical flow, evidence-based arguments, and professional
-      language throughout the document.
-    </p>
+  <!-- CONTENT -->
+  <section class="section">
 
-    <p>
-      We also provide support for technical editing, referencing,
-      proofreading, plagiarism checking, and customization according to
-      industry or organizational standards.
-    </p>
+    <div class="card">
 
-    <p>
-      Our goal is to deliver informative and compelling white papers that
-      strengthen credibility, support decision-making, and create lasting
-      professional value.
-    </p>
+      <h2>Our White Paper Services</h2>
 
-    <ul>
-      <li>✔ Professionally Structured Content</li>
-      <li>✔ Technical & Scientific Expertise</li>
-      <li>✔ Plagiarism-Free Writing</li>
-      <li>✔ Industry-Specific White Papers</li>
-      <li>✔ Business & Research-Based Documents</li>
-      <li>✔ Editing & Proofreading Support</li>
-      <li>✔ Timely Delivery</li>
-    </ul>
+      <div class="point">
+        <div class="bullet">✔</div>
 
-    <a href="index.html" class="back-btn">
-      ← Back to Home
-    </a>
+        <p>
+          We create professionally structured white papers designed to present
+          technical, scientific, or business information in a clear and
+          authoritative manner.
+        </p>
+      </div>
 
-  </div>
+      <div class="point">
+        <div class="bullet">✔</div>
 
-</div>
+        <p>
+          Our experts conduct detailed market and technical research to develop
+          informative, evidence-based, and solution-oriented white paper
+          content.
+        </p>
+      </div>
+
+      <div class="point">
+        <div class="bullet">✔</div>
+
+        <p>
+          We help organizations explain complex concepts, showcase innovations,
+          highlight industry trends, and establish thought leadership through
+          professionally written documents.
+        </p>
+      </div>
+
+      <div class="point">
+        <div class="bullet">✔</div>
+
+        <p>
+          Each white paper is carefully organized with executive summaries,
+          data-driven insights, graphical representation, and persuasive
+          technical writing.
+        </p>
+      </div>
+
+      <div class="point">
+        <div class="bullet">✔</div>
+
+        <p>
+          Our team ensures clarity, accuracy, proper referencing, and
+          publication-quality formatting suitable for corporate, academic,
+          and scientific audiences.
+        </p>
+      </div>
+
+      <div class="point">
+        <div class="bullet">✔</div>
+
+        <p>
+          We maintain complete confidentiality while delivering high-quality,
+          plagiarism-free white papers tailored to your objectives and industry
+          requirements.
+        </p>
+      </div>
+
+      <!-- FEATURES -->
+      <ul class="features">
+
+        <li>✔ Technical & Scientific White Papers</li>
+
+        <li>✔ Industry Research & Market Analysis</li>
+
+        <li>✔ Professional Formatting & Design</li>
+
+        <li>✔ Data-Driven & Evidence-Based Content</li>
+
+        <li>✔ Clear & Persuasive Writing Style</li>
+
+        <li>✔ Plagiarism-Free Original Content</li>
+
+        <li>✔ Fast Delivery & Revisions</li>
+
+        <li>✔ Confidential & Affordable Services</li>
+
+      </ul>
+
+      <!-- BUTTON -->
+      <a href="index.html" class="btn">
+        ← Back to Home
+      </a>
+
+    </div>
+
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2026 NEXUS Scientific Solutions. All Rights Reserved.</p>
+  </footer>
 
 </body>
 
