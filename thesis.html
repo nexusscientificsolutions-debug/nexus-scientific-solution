@@ -5,9 +5,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Thesis & Dissertation Writing | NEXUS Scientific Solutions</title>
+  <title>Thesis & Dissertation | NEXUS Scientific Solutions</title>
 
-  <!-- Google Font -->
+  <!-- GOOGLE FONT -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
     rel="stylesheet">
 
@@ -17,67 +17,208 @@
       margin:0;
       padding:0;
       font-family:'Poppins',sans-serif;
-      background:#f5f7fb;
-      color:#333;
+      background:#FFFFFF;
+      color:#1E293B;
     }
 
     /* HEADER */
     header{
-      background:#6d28d9;
-      color:white;
-      padding:20px;
+      background:#FFFFFF;
+      padding:20px 40px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      box-shadow:0 2px 12px rgba(0,0,0,0.08);
+    }
+
+    .logo{
+      display:flex;
+      align-items:center;
+      gap:15px;
+    }
+
+    .logo img{
+      height:90px;
+      width:auto;
+    }
+
+    .logo h2{
+      margin:0;
+      font-size:28px;
+      color:#1E293B;
+      font-weight:700;
+    }
+
+    /* HERO SECTION */
+    .hero{
       text-align:center;
+      padding:120px 20px;
+
+      background:
+      linear-gradient(
+        135deg,
+        #1d4ed8 0%,
+        #2563eb 45%,
+        #3b82f6 100%
+      );
+
+      color:white;
+
+      min-height:320px;
+
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+      align-items:center;
+
+      animation:fadeIn 1.2s ease;
+
+      position:relative;
+      overflow:hidden;
     }
 
-    /* CONTAINER */
-    .container{
-      max-width:1000px;
-      margin:auto;
-      padding:50px 20px;
+    /* OVERLAY EFFECT */
+    .hero::before{
+      content:"";
+      position:absolute;
+      inset:0;
+
+      background:
+      radial-gradient(circle at top left,
+      rgba(255,255,255,0.12),
+      transparent 40%),
+
+      radial-gradient(circle at bottom right,
+      rgba(255,255,255,0.08),
+      transparent 35%);
+
+      pointer-events:none;
     }
 
-    /* CONTENT BOX */
-    .content-box{
-      background:white;
-      padding:40px;
-      border-radius:12px;
-      box-shadow:0 6px 18px rgba(0,0,0,0.08);
+    .hero h1{
+      position:relative;
+      z-index:2;
+      font-size:50px;
+      margin-bottom:20px;
+      font-weight:700;
+    }
+
+    .hero p{
+      position:relative;
+      z-index:2;
+      font-size:20px;
+      max-width:800px;
+      color:#E2E8F0;
       line-height:1.8;
     }
 
-    h1{
-      color:#6d28d9;
-      margin-bottom:25px;
+    /* MAIN SECTION */
+    .section{
+      max-width:1100px;
+      margin:auto;
+      padding:70px 20px;
     }
 
-    ul li{
-      margin-bottom:12px;
+    /* CONTENT CARD */
+    .card{
+      background:#FFFFFF;
+      padding:45px;
+      border-radius:18px;
+      box-shadow:0 8px 22px rgba(0,0,0,0.08);
+      border:1px solid #E2E8F0;
+      line-height:1.9;
+    }
+
+    /* POINTS */
+    .point{
+      display:flex;
+      align-items:flex-start;
+      gap:14px;
+      margin-bottom:24px;
+    }
+
+    .bullet{
+      color:#2563EB;
+      font-size:22px;
+      font-weight:bold;
+      line-height:1.5;
+    }
+
+    .point p{
+      margin:0;
+      color:#475569;
+      font-size:16px;
+    }
+
+    /* FEATURES */
+    .features{
+      margin-top:35px;
+      padding-left:20px;
+    }
+
+    .features li{
+      margin-bottom:14px;
+      color:#1E293B;
+      font-weight:500;
+      line-height:1.7;
     }
 
     /* BUTTON */
-    .back-btn{
+    .btn{
       display:inline-block;
-      margin-top:30px;
-      background:#6d28d9;
+      margin-top:35px;
+      padding:14px 30px;
+      background:#2563EB;
       color:white;
-      padding:12px 25px;
-      border-radius:8px;
       text-decoration:none;
+      border-radius:10px;
       font-weight:600;
+      transition:0.3s;
     }
 
-    .back-btn:hover{
-      background:#4c1d95;
+    .btn:hover{
+      background:#1d4ed8;
     }
 
-    @media(max-width:768px){
-
-      .content-box{
-        padding:25px;
+    /* ANIMATION */
+    @keyframes fadeIn{
+      from{
+        opacity:0;
+        transform:translateY(30px);
       }
 
-      h1{
-        font-size:28px;
+      to{
+        opacity:1;
+        transform:translateY(0);
+      }
+    }
+
+    /* MOBILE */
+    @media(max-width:768px){
+
+      .hero{
+        padding:90px 20px;
+      }
+
+      .hero h1{
+        font-size:34px;
+      }
+
+      .hero p{
+        font-size:16px;
+      }
+
+      .card{
+        padding:28px;
+      }
+
+      .logo{
+        flex-direction:column;
+        text-align:center;
+      }
+
+      .logo img{
+        height:75px;
       }
 
     }
@@ -88,78 +229,117 @@
 
 <body>
 
-<!-- HEADER -->
-<header>
-  <h2>NEXUS Scientific Solutions</h2>
-</header>
+  <!-- HEADER -->
+  <header>
 
-<!-- MAIN CONTENT -->
-<div class="container">
+    <div class="logo">
+      <img src="logo.jpeg" alt="NEXUS Logo">
+      <h2>NEXUS Scientific Solutions</h2>
+    </div>
 
-  <div class="content-box">
+  </header>
 
-    <h1>Thesis & Dissertation Writing Services</h1>
+  <!-- HERO -->
+  <section class="hero">
 
-    <p>
-      At Nexus Scientific Solutions, we provide comprehensive thesis and
-      dissertation writing support for undergraduate, postgraduate,
-      PhD scholars, and academic researchers across multiple disciplines.
-    </p>
+    <h1>Thesis & Dissertation Writing</h1>
 
     <p>
-      Our services are designed to assist students and researchers at every
-      stage of the research journey, from topic selection and proposal
-      development to final drafting, editing, and submission preparation.
+      Complete academic research support with professional writing, analysis, formatting, and editing services.
     </p>
 
-    <p>
-      We help in identifying innovative research topics, conducting detailed
-      literature reviews, designing research methodologies, and organizing
-      data analysis using scientific and academic approaches.
-    </p>
+  </section>
 
-    <p>
-      Our expert team ensures that each thesis or dissertation is written
-      with clarity, logical structure, academic rigor, and proper formatting
-      according to university or journal guidelines.
-    </p>
+  <!-- CONTENT -->
+  <section class="section">
 
-    <p>
-      We also provide assistance with statistical analysis, interpretation
-      of results, citation management, plagiarism checking, proofreading,
-      and formatting styles such as APA, MLA, Chicago, Harvard, and others.
-    </p>
+    <div class="card">
 
-    <p>
-      Every document is carefully reviewed to maintain originality,
-      quality, and academic integrity while meeting deadlines and research
-      expectations.
-    </p>
+      <div class="point">
+        <div class="bullet">✔</div>
 
-    <p>
-      Our goal is to help students and researchers produce professional,
-      publication-ready, and academically strong thesis and dissertation
-      documents with confidence.
-    </p>
+        <p>
+          At Nexus Scientific Solutions, we provide comprehensive thesis and dissertation writing services tailored to meet university and academic research standards. Our team supports students, scholars, and researchers throughout every stage of the research journey.
+        </p>
+      </div>
 
-    <ul>
-      <li>✔ Thesis & Dissertation Writing Support</li>
-      <li>✔ Research Proposal Development</li>
-      <li>✔ Literature Review Assistance</li>
-      <li>✔ Statistical Data Analysis</li>
-      <li>✔ Plagiarism-Free Academic Content</li>
-      <li>✔ Editing & Proofreading Services</li>
-      <li>✔ Proper Referencing & Formatting</li>
-      <li>✔ Timely Project Delivery</li>
-    </ul>
+      <div class="point">
+        <div class="bullet">✔</div>
 
-    <a href="index.html" class="back-btn">
-      ← Back to Home
-    </a>
+        <p>
+          We assist in selecting research topics, preparing research proposals, defining objectives, and developing strong research frameworks aligned with your academic discipline and institutional guidelines.
+        </p>
+      </div>
 
-  </div>
+      <div class="point">
+        <div class="bullet">✔</div>
 
-</div>
+        <p>
+          Our experts conduct detailed literature reviews using credible scholarly sources to identify research gaps, establish theoretical foundations, and strengthen the quality of academic arguments.
+        </p>
+      </div>
+
+      <div class="point">
+        <div class="bullet">✔</div>
+
+        <p>
+          We provide support in designing research methodologies including qualitative, quantitative, and mixed-method approaches, ensuring methodological accuracy and reliability.
+        </p>
+      </div>
+
+      <div class="point">
+        <div class="bullet">✔</div>
+
+        <p>
+          Our services also include data collection guidance, statistical analysis, interpretation of findings, graphical presentation, and preparation of result discussions with academic precision.
+        </p>
+      </div>
+
+      <div class="point">
+        <div class="bullet">✔</div>
+
+        <p>
+          Every thesis and dissertation is written with strong emphasis on originality, clarity, coherence, academic integrity, and proper formatting according to university requirements.
+        </p>
+      </div>
+
+      <div class="point">
+        <div class="bullet">✔</div>
+
+        <p>
+          We also provide editing, proofreading, citation management, plagiarism checking, and final formatting support to ensure submission-ready academic documents.
+        </p>
+      </div>
+
+      <!-- FEATURES -->
+      <ul class="features">
+
+        <li>✔ Complete Thesis & Dissertation Assistance</li>
+
+        <li>✔ Research Proposal Development</li>
+
+        <li>✔ Literature Review Support</li>
+
+        <li>✔ Statistical Analysis & Interpretation</li>
+
+        <li>✔ Formatting & Referencing Assistance</li>
+
+        <li>✔ Plagiarism-Free Academic Content</li>
+
+        <li>✔ Editing & Proofreading Services</li>
+
+        <li>✔ Timely Delivery & Confidential Support</li>
+
+      </ul>
+
+      <!-- BUTTON -->
+      <a href="index.html" class="btn">
+        ← Back to Home
+      </a>
+
+    </div>
+
+  </section>
 
 </body>
 
