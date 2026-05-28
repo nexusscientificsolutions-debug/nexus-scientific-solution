@@ -7,62 +7,266 @@
 
   <title>Review Articles | NEXUS Scientific Solutions</title>
 
+  <!-- GOOGLE FONT -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
     rel="stylesheet">
 
   <style>
 
+    /* BODY */
     body{
       margin:0;
-      padding:0;
       font-family:'Poppins',sans-serif;
-      background:#f5f7fb;
-      color:#333;
+      background:#FFFFFF;
+      color:#1E293B;
+      overflow-x:hidden;
     }
 
+    /* HEADER */
     header{
-      background:#6d28d9;
-      color:white;
-      padding:20px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      padding:20px 40px;
+      background:#FFFFFF;
+      box-shadow:0 2px 12px rgba(0,0,0,0.08);
+      min-height:110px;
+      box-sizing:border-box;
+    }
+
+    /* LOGO */
+    .logo{
+      display:flex;
+      align-items:center;
+      gap:15px;
+    }
+
+    .logo img{
+      height:95px;
+      width:auto;
+      display:block;
+    }
+
+    .logo h2{
+      margin:0;
+      color:#1E293B;
+      font-size:28px;
+      font-weight:700;
+    }
+
+    /* HERO SECTION */
+    .hero{
       text-align:center;
+      padding:120px 20px;
+
+      background:
+      linear-gradient(
+        135deg,
+        #1d4ed8 0%,
+        #2563eb 45%,
+        #3b82f6 100%
+      );
+
+      color:white;
+
+      min-height:320px;
+
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+      align-items:center;
+
+      animation:fadeIn 1.2s ease;
+
+      position:relative;
+      overflow:hidden;
     }
 
-    .container{
-      max-width:1000px;
-      margin:auto;
-      padding:50px 20px;
+    /* SOFT OVERLAY EFFECT */
+    .hero::before{
+      content:"";
+      position:absolute;
+      inset:0;
+
+      background:
+      radial-gradient(circle at top left,
+      rgba(255,255,255,0.12),
+      transparent 40%),
+
+      radial-gradient(circle at bottom right,
+      rgba(255,255,255,0.08),
+      transparent 35%);
+
+      pointer-events:none;
     }
 
-    .content-box{
-      background:white;
-      padding:40px;
-      border-radius:12px;
-      box-shadow:0 6px 18px rgba(0,0,0,0.08);
+    /* HERO CONTENT */
+    .hero h1{
+      position:relative;
+      z-index:2;
+
+      font-size:50px;
+      margin-bottom:20px;
+      font-weight:700;
+      letter-spacing:0.5px;
+    }
+
+    .hero p{
+      position:relative;
+      z-index:2;
+
+      font-size:20px;
+      max-width:850px;
+      color:#E2E8F0;
       line-height:1.8;
     }
 
-    h1{
-      color:#6d28d9;
+    /* MAIN SECTION */
+    .section{
+      max-width:1100px;
+      margin:auto;
+      padding:70px 20px;
+    }
+
+    /* CONTENT CARD */
+    .card{
+      background:#FFFFFF;
+      padding:45px;
+      border-radius:18px;
+      box-shadow:0 6px 18px rgba(0,0,0,0.08);
+      border:1px solid #E2E8F0;
+      transition:0.4s;
+    }
+
+    /* CARD HOVER */
+    .card:hover{
+      transform:translateY(-8px);
+      border-color:#60A5FA;
+      box-shadow:0 10px 24px rgba(37,99,235,0.12);
+    }
+
+    /* SUB HEADING */
+    .card h2{
+      color:#2563EB;
       margin-bottom:25px;
+      font-size:32px;
+      text-align:center;
     }
 
-    ul li{
-      margin-bottom:10px;
+    /* CONTENT POINTS */
+    .point{
+      display:flex;
+      align-items:flex-start;
+      gap:14px;
+      margin-bottom:24px;
     }
 
-    .back-btn{
+    .bullet{
+      color:#2563EB;
+      font-size:22px;
+      font-weight:bold;
+      line-height:1.6;
+    }
+
+    .point p{
+      margin:0;
+      color:#475569;
+      font-size:16px;
+      line-height:1.9;
+    }
+
+    /* FEATURES */
+    .features{
+      margin-top:35px;
+      padding-left:20px;
+    }
+
+    .features li{
+      margin-bottom:14px;
+      color:#334155;
+      font-weight:500;
+      line-height:1.7;
+    }
+
+    /* BUTTON */
+    .btn{
       display:inline-block;
-      margin-top:30px;
-      background:#6d28d9;
+      margin-top:35px;
+      background:#2563EB;
       color:white;
-      padding:12px 25px;
-      border-radius:8px;
+      border:none;
+      padding:14px 30px;
+      border-radius:10px;
       text-decoration:none;
+      cursor:pointer;
       font-weight:600;
+      font-size:16px;
+      transition:0.3s;
     }
 
-    .back-btn:hover{
-      background:#4c1d95;
+    .btn:hover{
+      background:#1d4ed8;
+    }
+
+    /* FOOTER */
+    footer{
+      background:#1E293B;
+      color:white;
+      text-align:center;
+      padding:25px;
+      margin-top:50px;
+    }
+
+    /* ANIMATION */
+    @keyframes fadeIn{
+      from{
+        opacity:0;
+        transform:translateY(30px);
+      }
+
+      to{
+        opacity:1;
+        transform:translateY(0);
+      }
+    }
+
+    /* MOBILE RESPONSIVE */
+    @media(max-width:768px){
+
+      header{
+        flex-direction:column;
+        text-align:center;
+        padding:20px;
+      }
+
+      .logo{
+        flex-direction:column;
+      }
+
+      .logo img{
+        height:80px;
+      }
+
+      .hero{
+        padding:90px 20px;
+      }
+
+      .hero h1{
+        font-size:34px;
+      }
+
+      .hero p{
+        font-size:16px;
+      }
+
+      .card{
+        padding:28px;
+      }
+
+      .card h2{
+        font-size:26px;
+      }
+
     }
 
   </style>
@@ -71,61 +275,129 @@
 
 <body>
 
-<header>
-  <h2>NEXUS Scientific Solutions</h2>
-</header>
+  <!-- HEADER -->
+  <header>
 
-<div class="container">
+    <div class="logo">
+      <img src="logo.jpeg" alt="NEXUS Logo">
+      <h2>NEXUS Scientific Solutions</h2>
+    </div>
 
-  <div class="content-box">
+  </header>
 
-    <h1>Review Article Writing Services</h1>
+  <!-- HERO SECTION -->
+  <section class="hero">
 
-    <p>
-      We provide high-quality review article writing services for
-      researchers, PhD scholars, students, and academicians.
-    </p>
-
-    <p>
-      Our expert team assists in:
-    </p>
-
-    <ul>
-      <li>Systematic Review Writing</li>
-      <li>Literature Review Preparation</li>
-      <li>Scoping Review Articles</li>
-      <li>Meta-analysis Support</li>
-      <li>Journal Formatting & Editing</li>
-      <li>Reference & Citation Management</li>
-      <li>Plagiarism-Free Scientific Writing</li>
-    </ul>
+    <h1>Review Article Writing</h1>
 
     <p>
-      We ensure publication-quality content with proper scientific
-      structure, latest references, and journal guidelines.
+      Comprehensive scientific review article writing services with in-depth
+      literature analysis and structured academic presentation.
     </p>
 
-    <p>
-      Our services are suitable for:
-    </p>
+  </section>
 
-    <ul>
-      <li>SCI / Scopus Journal Publications</li>
-      <li>PhD Research Scholars</li>
-      <li>Medical & Life Science Researchers</li>
-      <li>Engineering & Technology Reviews</li>
-      <li>Academic Project Reports</li>
-    </ul>
+  <!-- CONTENT -->
+  <section class="section">
 
-    <a href="index.html" class="back-btn">
-      ← Back to Home
-    </a>
+    <div class="card">
 
-  </div>
+      <h2>Our Review Article Services</h2>
 
-</div>
+      <div class="point">
+        <div class="bullet">✔</div>
+
+        <p>
+          We provide professional review article writing services designed for
+          researchers, academicians, scholars, and publication professionals
+          across multiple scientific and technical domains.
+        </p>
+      </div>
+
+      <div class="point">
+        <div class="bullet">✔</div>
+
+        <p>
+          Our team performs extensive literature research using peer-reviewed
+          journals, authentic databases, and recent publications to ensure
+          comprehensive coverage of your topic.
+        </p>
+      </div>
+
+      <div class="point">
+        <div class="bullet">✔</div>
+
+        <p>
+          We organize and summarize complex scientific information into a
+          clear, well-structured, and publication-ready review manuscript.
+        </p>
+      </div>
+
+      <div class="point">
+        <div class="bullet">✔</div>
+
+        <p>
+          Detailed comparative analysis, critical discussion, trend
+          identification, and research gap analysis are included to enhance
+          the quality and originality of the review.
+        </p>
+      </div>
+
+      <div class="point">
+        <div class="bullet">✔</div>
+
+        <p>
+          Our experts ensure proper academic formatting, accurate referencing,
+          plagiarism-free writing, and compliance with journal submission
+          standards.
+        </p>
+      </div>
+
+      <div class="point">
+        <div class="bullet">✔</div>
+
+        <p>
+          We focus on clarity, scientific accuracy, logical flow, and strong
+          presentation to help improve publication opportunities in reputed
+          journals.
+        </p>
+      </div>
+
+      <!-- FEATURES -->
+      <ul class="features">
+
+        <li>✔ Comprehensive Literature Review</li>
+
+        <li>✔ Critical Scientific Analysis</li>
+
+        <li>✔ Journal-Ready Manuscript Preparation</li>
+
+        <li>✔ Proper Referencing & Citations</li>
+
+        <li>✔ Research Gap Identification</li>
+
+        <li>✔ Plagiarism-Free Academic Writing</li>
+
+        <li>✔ Fast Delivery & Revisions</li>
+
+        <li>✔ Confidential & Affordable Services</li>
+
+      </ul>
+
+      <!-- BUTTON -->
+      <a href="index.html" class="btn">
+        ← Back to Home
+      </a>
+
+    </div>
+
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2026 NEXUS Scientific Solutions. All Rights Reserved.</p>
+  </footer>
 
 </body>
 
 </html>
-
