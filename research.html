@@ -7,54 +7,153 @@
 
   <title>Research Paper Writing | NEXUS Scientific Solutions</title>
 
-  <!-- Google Font -->
+  <!-- GOOGLE FONT -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
     rel="stylesheet">
 
   <style>
 
+    /* BODY */
     body{
       margin:0;
-      padding:0;
       font-family:'Poppins',sans-serif;
-      background:#f5f7fb;
-      color:#333;
+      background:#FFFFFF;
+      color:#1E293B;
+      overflow-x:hidden;
     }
 
     /* HEADER */
     header{
-      background:#38bdf8;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      padding:20px 40px;
+      background:#FFFFFF;
+      box-shadow:0 2px 12px rgba(0,0,0,0.08);
+      min-height:110px;
+      box-sizing:border-box;
+    }
+
+    /* LOGO */
+    .logo{
+      display:flex;
+      align-items:center;
+      gap:15px;
+    }
+
+    .logo img{
+      height:95px;
+      width:auto;
+      display:block;
+    }
+
+    .logo h2{
+      margin:0;
+      color:#1E293B;
+      font-size:28px;
+      font-weight:700;
+    }
+
+    /* HERO SECTION */
+    .hero{
+      text-align:center;
+      padding:120px 20px;
+
+      background:
+      linear-gradient(
+        135deg,
+        #1d4ed8 0%,
+        #2563eb 45%,
+        #3b82f6 100%
+      );
+
       color:white;
-      padding:20px;
-      text-align:center;
-      box-shadow:0 2px 10px rgba(0,0,0,0.08);
+
+      min-height:320px;
+
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+      align-items:center;
+
+      animation:fadeIn 1.2s ease;
+
+      position:relative;
+      overflow:hidden;
     }
 
-    /* CONTAINER */
-    .container{
-      max-width:1000px;
+    /* SOFT OVERLAY EFFECT */
+    .hero::before{
+      content:"";
+      position:absolute;
+      inset:0;
+
+      background:
+      radial-gradient(circle at top left,
+      rgba(255,255,255,0.12),
+      transparent 40%),
+
+      radial-gradient(circle at bottom right,
+      rgba(255,255,255,0.08),
+      transparent 35%);
+
+      pointer-events:none;
+    }
+
+    /* HERO CONTENT */
+    .hero h1{
+      position:relative;
+      z-index:2;
+
+      font-size:50px;
+      margin-bottom:20px;
+      font-weight:700;
+      letter-spacing:0.5px;
+    }
+
+    .hero p{
+      position:relative;
+      z-index:2;
+
+      font-size:20px;
+      max-width:850px;
+      color:#E2E8F0;
+      line-height:1.8;
+    }
+
+    /* MAIN SECTION */
+    .section{
+      max-width:1100px;
       margin:auto;
-      padding:50px 20px;
+      padding:70px 20px;
     }
 
-    /* CONTENT BOX */
-    .content-box{
-      background:white;
-      padding:40px;
-      border-radius:14px;
+    /* CONTENT CARD */
+    .card{
+      background:#FFFFFF;
+      padding:45px;
+      border-radius:18px;
       box-shadow:0 6px 18px rgba(0,0,0,0.08);
-      line-height:1.9;
+      border:1px solid #E2E8F0;
+      transition:0.4s;
     }
 
-    /* HEADING */
-    h1{
-      color:#38bdf8;
-      margin-bottom:35px;
+    /* CARD HOVER */
+    .card:hover{
+      transform:translateY(-8px);
+      border-color:#60A5FA;
+      box-shadow:0 10px 24px rgba(37,99,235,0.12);
+    }
+
+    /* SUB HEADING */
+    .card h2{
+      color:#2563EB;
+      margin-bottom:25px;
+      font-size:32px;
       text-align:center;
-      font-size:38px;
     }
 
-    /* PARAGRAPH STYLING */
+    /* CONTENT POINTS */
     .point{
       display:flex;
       align-items:flex-start;
@@ -63,61 +162,109 @@
     }
 
     .bullet{
-      color:#38bdf8;
+      color:#2563EB;
       font-size:22px;
       font-weight:bold;
-      line-height:1.5;
-      min-width:20px;
+      line-height:1.6;
     }
 
     .point p{
       margin:0;
+      color:#475569;
       font-size:16px;
-      color:#444;
+      line-height:1.9;
     }
 
-    /* FEATURES LIST */
+    /* FEATURES */
     .features{
       margin-top:35px;
-      padding-left:25px;
+      padding-left:20px;
     }
 
     .features li{
       margin-bottom:14px;
+      color:#334155;
       font-weight:500;
-      color:#333;
+      line-height:1.7;
     }
 
     /* BUTTON */
-    .back-btn{
+    .btn{
       display:inline-block;
       margin-top:35px;
-      background:#38bdf8;
+      background:#2563EB;
       color:white;
-      padding:13px 28px;
+      border:none;
+      padding:14px 30px;
       border-radius:10px;
       text-decoration:none;
+      cursor:pointer;
       font-weight:600;
+      font-size:16px;
       transition:0.3s;
     }
 
-    /* BUTTON HOVER */
-    .back-btn:hover{
-      background:#0ea5e9;
+    .btn:hover{
+      background:#1d4ed8;
     }
 
+    /* FOOTER */
+    footer{
+      background:#1E293B;
+      color:white;
+      text-align:center;
+      padding:25px;
+      margin-top:50px;
+    }
+
+    /* ANIMATION */
+    @keyframes fadeIn{
+      from{
+        opacity:0;
+        transform:translateY(30px);
+      }
+
+      to{
+        opacity:1;
+        transform:translateY(0);
+      }
+    }
+
+    /* MOBILE RESPONSIVE */
     @media(max-width:768px){
 
-      .content-box{
-        padding:25px;
+      header{
+        flex-direction:column;
+        text-align:center;
+        padding:20px;
       }
 
-      h1{
-        font-size:28px;
+      .logo{
+        flex-direction:column;
       }
 
-      .point{
-        gap:10px;
+      .logo img{
+        height:80px;
+      }
+
+      .hero{
+        padding:90px 20px;
+      }
+
+      .hero h1{
+        font-size:34px;
+      }
+
+      .hero p{
+        font-size:16px;
+      }
+
+      .card{
+        padding:28px;
+      }
+
+      .card h2{
+        font-size:26px;
       }
 
     }
@@ -128,119 +275,122 @@
 
 <body>
 
-<!-- HEADER -->
-<header>
-  <h2>NEXUS Scientific Solutions</h2>
-</header>
+  <!-- HEADER -->
+  <header>
 
-<!-- MAIN CONTENT -->
-<div class="container">
+    <div class="logo">
+      <img src="logo.jpeg" alt="NEXUS Logo">
+      <h2>NEXUS Scientific Solutions</h2>
+    </div>
 
-  <div class="content-box">
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="hero">
 
     <h1>Research Paper Writing</h1>
 
-    <div class="point">
-      <div class="bullet">✔</div>
+    <p>
+      High-quality academic research writing services tailored for students,
+      researchers, scholars, and professionals.
+    </p>
 
-      <p>
-        At Nexus Scientific Solutions, we provide end-to-end research paper
-        writing services tailored to meet the highest academic and publication
-        standards. Whether you are a student, researcher, or industry
-        professional, our team guides you through every stage of the research
-        process—from conceptualization to final submission.
-      </p>
+  </section>
+
+  <!-- CONTENT -->
+  <section class="section">
+
+    <div class="card">
+
+      <h2>Our Research Writing Services</h2>
+
+      <div class="point">
+        <div class="bullet">✔</div>
+
+        <p>
+          We provide complete end-to-end research paper writing support for
+          academic, scientific, and professional research projects across
+          multiple disciplines.
+        </p>
+      </div>
+
+      <div class="point">
+        <div class="bullet">✔</div>
+
+        <p>
+          Our experts help in selecting innovative research topics aligned with
+          current industry trends and academic requirements.
+        </p>
+      </div>
+
+      <div class="point">
+        <div class="bullet">✔</div>
+
+        <p>
+          We conduct detailed literature reviews using authentic scientific
+          databases and peer-reviewed journals to strengthen your research.
+        </p>
+      </div>
+
+      <div class="point">
+        <div class="bullet">✔</div>
+
+        <p>
+          Assistance is provided for qualitative, quantitative, and mixed-method
+          research methodologies with proper data analysis and interpretation.
+        </p>
+      </div>
+
+      <div class="point">
+        <div class="bullet">✔</div>
+
+        <p>
+          Every document is professionally formatted with proper citations,
+          referencing styles, tables, graphs, and plagiarism-free content.
+        </p>
+      </div>
+
+      <div class="point">
+        <div class="bullet">✔</div>
+
+        <p>
+          Our team ensures clarity, originality, scientific accuracy, and timely
+          delivery while maintaining complete confidentiality.
+        </p>
+      </div>
+
+      <!-- FEATURES -->
+      <ul class="features">
+
+        <li>✔ 100% Plagiarism-Free Content</li>
+
+        <li>✔ Publication-Ready Research Papers</li>
+
+        <li>✔ Expert Academic Writers & Researchers</li>
+
+        <li>✔ Statistical Analysis & Interpretation</li>
+
+        <li>✔ APA, MLA, IEEE & Journal Formatting</li>
+
+        <li>✔ Fast Delivery & Revisions</li>
+
+        <li>✔ Affordable Pricing & Confidential Services</li>
+
+      </ul>
+
+      <!-- BUTTON -->
+      <a href="index.html" class="btn">
+        ← Back to Home
+      </a>
+
     </div>
 
-    <div class="point">
-      <div class="bullet">✔</div>
+  </section>
 
-      <p>
-        We help identify relevant and impactful research topics aligned with
-        your discipline and current scientific trends, ensuring meaningful
-        contribution to your field of study.
-      </p>
-    </div>
-
-    <div class="point">
-      <div class="bullet">✔</div>
-
-      <p>
-        Our experts conduct comprehensive literature reviews using authentic,
-        credible, and up-to-date scientific sources to establish strong
-        theoretical foundations and identify research gaps.
-      </p>
-    </div>
-
-    <div class="point">
-      <div class="bullet">✔</div>
-
-      <p>
-        We assist in designing appropriate research methodologies including
-        qualitative, quantitative, and mixed-method research approaches based
-        on your project objectives.
-      </p>
-    </div>
-
-    <div class="point">
-      <div class="bullet">✔</div>
-
-      <p>
-        Our services also include data collection support, statistical analysis,
-        interpretation of findings, graphical representation, and result
-        presentation for accurate reporting.
-      </p>
-    </div>
-
-    <div class="point">
-      <div class="bullet">✔</div>
-
-      <p>
-        Every research paper is written with strong emphasis on clarity,
-        coherence, scientific accuracy, originality, and proper formatting
-        according to journal or university guidelines.
-      </p>
-    </div>
-
-    <div class="point">
-      <div class="bullet">✔</div>
-
-      <p>
-        We guarantee 100% plagiarism-free content. Each document undergoes
-        detailed proofreading, editing, and quality checks before final
-        delivery to ensure excellence.
-      </p>
-    </div>
-
-    <!-- FEATURES -->
-    <ul class="features">
-
-      <li>✔ Plagiarism-Free Scientific Content</li>
-
-      <li>✔ Experienced Academic Writers</li>
-
-      <li>✔ Literature Review & Research Support</li>
-
-      <li>✔ Statistical Analysis Assistance</li>
-
-      <li>✔ Journal Formatting & Referencing</li>
-
-      <li>✔ Fast & Timely Delivery</li>
-
-      <li>✔ Affordable Pricing</li>
-
-      <li>✔ Confidential & Secure Services</li>
-
-    </ul>
-
-    <!-- BUTTON -->
-    <a href="index.html" class="back-btn">
-      ← Back to Home
-    </a>
-
-  </div>
-
-</div>
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2026 NEXUS Scientific Solutions. All Rights Reserved.</p>
+  </footer>
 
 </body>
 
