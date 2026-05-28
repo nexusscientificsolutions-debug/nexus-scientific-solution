@@ -73,7 +73,7 @@
     }
 
     nav a:hover{
-      color:#2563EB;
+      color:#64748B;
     }
 
     /* HERO SECTION */
@@ -81,18 +81,17 @@
       text-align:center;
       padding:120px 20px;
 
-      /* SOFTER PROFESSIONAL GRADIENT */
       background:
       linear-gradient(
         135deg,
-        #1d4ed8 0%,
-        #2563eb 45%,
-        #3b82f6 100%
+        #334155 0%,
+        #475569 45%,
+        #64748B 100%
       );
 
       color:white;
 
-      min-height:250px;
+      min-height:320px;
 
       display:flex;
       flex-direction:column;
@@ -155,7 +154,7 @@
       text-align:center;
       font-size:36px;
       margin-bottom:45px;
-      color:#1E293B;
+      color:#334155;
     }
 
     /* CARDS */
@@ -177,12 +176,12 @@
 
     .card:hover{
       transform:translateY(-8px);
-      border-color:#60A5FA;
-      box-shadow:0 10px 24px rgba(37,99,235,0.12);
+      border-color:#94A3B8;
+      box-shadow:0 10px 24px rgba(71,85,105,0.15);
     }
 
     .card h3{
-      color:#2563EB;
+      color:#475569;
       margin-bottom:12px;
       font-size:22px;
     }
@@ -211,7 +210,7 @@
     .form-container h2{
       text-align:center;
       margin-bottom:30px;
-      color:#1E293B;
+      color:#334155;
       font-size:32px;
     }
 
@@ -219,7 +218,7 @@
       display:block;
       margin-bottom:8px;
       font-weight:600;
-      color:#1E293B;
+      color:#334155;
     }
 
     .form-container input,
@@ -239,13 +238,13 @@
     .form-container input:focus,
     .form-container textarea:focus{
       outline:none;
-      border-color:#60A5FA;
-      box-shadow:0 0 0 3px rgba(96,165,250,0.18);
+      border-color:#94A3B8;
+      box-shadow:0 0 0 3px rgba(148,163,184,0.18);
     }
 
     /* BUTTON */
     button{
-      background:#2563EB;
+      background:#475569;
       color:white;
       border:none;
       padding:14px 30px;
@@ -257,7 +256,7 @@
     }
 
     button:hover{
-      background:#1d4ed8;
+      background:#334155;
     }
 
     /* CONTACT */
@@ -383,120 +382,6 @@
     </p>
 
   </section>
-
-  <!-- SERVICES -->
-  <section id="services" class="section">
-
-    <h2>Our Services</h2>
-
-    <div class="cards">
-
-      <a href="research.html" class="card-link">
-        <div class="card">
-          <h3>Research Paper Writing</h3>
-          <p>High-quality research papers with proper formatting, citations, and publication-ready content.</p>
-        </div>
-      </a>
-
-      <a href="review.html" class="card-link">
-        <div class="card">
-          <h3>Review Articles</h3>
-          <p>Comprehensive literature reviews and scientific review articles written by domain experts.</p>
-        </div>
-      </a>
-
-      <a href="whitepaper.html" class="card-link">
-        <div class="card">
-          <h3>White Papers</h3>
-          <p>Professional white paper writing services for technical, scientific, and business documentation.</p>
-        </div>
-      </a>
-
-      <a href="thesis.html" class="card-link">
-        <div class="card">
-          <h3>Thesis & Dissertation</h3>
-          <p>Complete thesis and dissertation support including research, analysis, formatting, and editing.</p>
-        </div>
-      </a>
-
-    </div>
-
-  </section>
-
-  <!-- ORDER FORM -->
-  <section id="order">
-
-    <form class="form-container" id="orderForm">
-
-      <h2>Submit Your Order</h2>
-
-      <label>Name</label>
-      <input type="text"
-        placeholder="Enter your full name"
-        required>
-
-      <label>Email</label>
-      <input type="email"
-        placeholder="Enter your email address"
-        required>
-
-      <label>Phone Number</label>
-      <input type="text"
-        placeholder="Enter your phone number"
-        required>
-
-      <label>Project Details</label>
-
-      <textarea rows="6"
-        placeholder="Describe your project requirements"></textarea>
-
-      <button type="submit">
-        Submit Order
-      </button>
-
-    </form>
-
-  </section>
-
-  <!-- CONTACT -->
-  <section id="contact" class="section">
-
-    <h2>Contact Us</h2>
-
-    <p>Email: nexusscientificsolutions@gmail.com</p>
-
-    <p>Phone: +91 9587078847</p>
-
-  </section>
-
-  <!-- FOOTER -->
-  <footer>
-    <p>© 2026 NEXUS Scientific Solutions. All Rights Reserved.</p>
-  </footer>
-
-  <!-- WHATSAPP -->
-  <a class="whatsapp"
-    href="https://wa.me/919587078847"
-    target="_blank">
-    💬
-  </a>
-
-  <!-- JAVASCRIPT -->
-  <script>
-
-    const form = document.getElementById("orderForm");
-
-    form.addEventListener("submit", function(e){
-
-      e.preventDefault();
-
-      alert("Order Submitted Successfully!");
-
-      form.reset();
-
-    });
-
-  </script>
 
 </body>
 
