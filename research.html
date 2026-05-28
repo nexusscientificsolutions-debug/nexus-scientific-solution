@@ -23,10 +23,11 @@
 
     /* HEADER */
     header{
-      background:#8b5cf6;
+      background:#2563eb;
       color:white;
       padding:20px;
       text-align:center;
+      box-shadow:0 2px 10px rgba(0,0,0,0.08);
     }
 
     /* CONTAINER */
@@ -42,34 +43,62 @@
       padding:40px;
       border-radius:12px;
       box-shadow:0 6px 18px rgba(0,0,0,0.08);
-      line-height:1.8;
+      line-height:1.9;
     }
 
     /* HEADING */
     h1{
-      color:#8b5cf6;
-      margin-bottom:25px;
+      color:#2563eb;
+      margin-bottom:30px;
+      text-align:center;
     }
 
-    ul li{
-      margin-bottom:12px;
+    /* PARAGRAPH STYLING */
+    .point{
+      display:flex;
+      align-items:flex-start;
+      gap:12px;
+      margin-bottom:22px;
+    }
+
+    .bullet{
+      color:#2563eb;
+      font-size:20px;
+      font-weight:bold;
+      line-height:1.5;
+    }
+
+    .point p{
+      margin:0;
+    }
+
+    /* FEATURES LIST */
+    .features{
+      margin-top:30px;
+      padding-left:20px;
+    }
+
+    .features li{
+      margin-bottom:14px;
+      font-weight:500;
     }
 
     /* BUTTON */
     .back-btn{
       display:inline-block;
-      margin-top:30px;
-      background:#8b5cf6;
+      margin-top:35px;
+      background:#2563eb;
       color:white;
       padding:12px 25px;
       border-radius:8px;
       text-decoration:none;
       font-weight:600;
+      transition:0.3s;
     }
 
     /* BUTTON HOVER */
     .back-btn:hover{
-      background:#7c3aed;
+      background:#1d4ed8;
     }
 
     @media(max-width:768px){
@@ -102,67 +131,100 @@
 
     <h1>Research Paper Writing</h1>
 
-    <p>
-      At Nexus Scientific Solutions, we provide end-to-end research paper
-      writing services tailored to meet the highest academic and publication
-      standards. Whether you are a student, researcher, or industry
-      professional, our team is equipped to guide you through every stage of
-      the research process—from conceptualization to final submission.
-    </p>
+    <div class="point">
+      <div class="bullet">✔</div>
 
-    <p>
-      We begin by helping you identify a relevant, impactful topic that aligns
-      with your discipline and current research trends, ensuring your work
-      contributes meaningfully to the field.
-    </p>
+      <p>
+        At Nexus Scientific Solutions, we provide end-to-end research paper
+        writing services tailored to meet the highest academic and publication
+        standards. Whether you are a student, researcher, or industry
+        professional, our team is equipped to guide you through every stage
+        of the research process—from conceptualization to final submission.
+      </p>
+    </div>
 
-    <p>
-      Our experts conduct a thorough literature review using credible and
-      up-to-date sources to establish a strong theoretical foundation and
-      highlight existing research gaps.
-    </p>
+    <div class="point">
+      <div class="bullet">✔</div>
 
-    <p>
-      Based on your objectives, we assist in designing appropriate research
-      methodologies, whether qualitative, quantitative, or mixed-method
-      approaches.
-    </p>
+      <p>
+        We begin by helping you identify relevant and impactful research topics
+        aligned with your discipline and current research trends, ensuring your
+        work contributes meaningfully to the field.
+      </p>
+    </div>
 
-    <p>
-      We also support data collection, statistical analysis, and interpretation,
-      ensuring that results are accurate, logical, and clearly presented.
-    </p>
+    <div class="point">
+      <div class="bullet">✔</div>
 
-    <p>
-      A strong emphasis is placed on clarity, coherence, and scientific rigor.
-      Each paper is carefully structured with well-developed arguments, smooth
-      transitions, and precise language.
-    </p>
+      <p>
+        Our experts conduct comprehensive literature reviews using credible and
+        up-to-date scientific sources to establish a strong theoretical
+        foundation and identify existing research gaps.
+      </p>
+    </div>
 
-    <p>
-      We also ensure strict adherence to journal or university guidelines,
-      including formatting and citation styles such as APA, MLA, Chicago, or
-      others as required.
-    </p>
+    <div class="point">
+      <div class="bullet">✔</div>
 
-    <p>
-      Most importantly, we guarantee 100% original and plagiarism-free content.
-      Every document undergoes quality checks to maintain academic integrity and
-      excellence.
-    </p>
+      <p>
+        Based on your research objectives, we assist in designing appropriate
+        methodologies including qualitative, quantitative, and mixed-method
+        research approaches.
+      </p>
+    </div>
 
-    <p>
-      With our support, you can confidently submit a polished, professional,
-      and publication-ready research paper that stands out.
-    </p>
+    <div class="point">
+      <div class="bullet">✔</div>
 
-    <ul>
-      <li>✔ Plagiarism-free content</li>
-      <li>✔ Expert writers</li>
-      <li>✔ Fast delivery</li>
-      <li>✔ Affordable pricing</li>
+      <p>
+        We also support data collection, statistical analysis, interpretation
+        of findings, and graphical presentation to ensure clear and accurate
+        reporting of results.
+      </p>
+    </div>
+
+    <div class="point">
+      <div class="bullet">✔</div>
+
+      <p>
+        Every paper is written with strong emphasis on clarity, coherence,
+        scientific rigor, and proper academic formatting according to journal
+        or university guidelines.
+      </p>
+    </div>
+
+    <div class="point">
+      <div class="bullet">✔</div>
+
+      <p>
+        We guarantee 100% original and plagiarism-free content. Each document
+        undergoes careful quality checks, editing, and proofreading before
+        final delivery.
+      </p>
+    </div>
+
+    <!-- FEATURES -->
+    <ul class="features">
+
+      <li>✔ Plagiarism-Free Scientific Content</li>
+
+      <li>✔ Experienced Academic Writers</li>
+
+      <li>✔ Literature Review & Research Support</li>
+
+      <li>✔ Statistical Analysis Assistance</li>
+
+      <li>✔ Journal Formatting & Referencing</li>
+
+      <li>✔ Fast & Timely Delivery</li>
+
+      <li>✔ Affordable Pricing</li>
+
+      <li>✔ Confidential & Secure Services</li>
+
     </ul>
 
+    <!-- BUTTON -->
     <a href="index.html" class="back-btn">
       ← Back to Home
     </a>
